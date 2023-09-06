@@ -17,8 +17,7 @@ agebtn.addEventListener( "click", () =>{
 
         console.log("current "+currentYear);
         console.log("dobYear" + dobYear);
-        console.log(currentYear > dobYear); 
-        console.log(currentYear == dobYear); 
+      
         if(currentYear > dobYear || currentYear == dobYear ){ 
 
         const age = currentYear - dobYear;
@@ -28,8 +27,7 @@ agebtn.addEventListener( "click", () =>{
 
         result.innerHTML= `Your Age is :${age}` 
     }else{
-
             alert("Date of birth is bigger than curret date.")
-    }
+        }
     }
 });
