@@ -6,6 +6,7 @@ agebtn.addEventListener( "click", () =>{
 
     if(inputbtn.value == "" ){
         alert("Please Enter a Valid Date");
+        return;
     }else{
         
         const dob  = new Date(inputbtn.value)
@@ -13,13 +14,22 @@ agebtn.addEventListener( "click", () =>{
 
         const currentDate = new Date();
         const currentYear = currentDate.getFullYear();
-        if(currentYear => dobYear ){ 
+
+        console.log("current "+currentYear);
+        console.log("dobYear" + dobYear);
+        console.log(currentYear > dobYear); 
+        console.log(currentYear == dobYear); 
+        if(currentYear > dobYear || currentYear == dobYear ){ 
+
         const age = currentYear - dobYear;
-        result.style.color = "red"; // Set text color to red
-            result.style.fontSize = "20px"
+
+        result.style.color = "red";
+         result.style.fontSize = "20px"
+
         result.innerHTML= `Your Age is :${age}` 
     }else{
-            alert("Date is Bigger than curret date.")
+
+            alert("Date of birth is bigger than curret date.")
     }
     }
 });
